@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCiFY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/home.css">
+</head>
+<body>
+    
+    <div class="background">
+        {% include 'nav.html' %}
+    <div class="main-container">
+        <!-- START NAME DETAILS -->
+        <div class="name-container">
+            {% if user %}
+            <span id="name-details" class="name-details">
+                {{ user[1] | title_case }} {{ user[2] | title_case }}
+            </span><br>
+            <span id="nickname" class="nickname">Nickname: {{user[3] | title_case }}</span><br>
+            {% endif %}
+            <!-- <a href="{{ url_for('logout') }}">Log out</a> -->
+        </div>
+    </div>    
+        <!-- END -->
+
+        <!-- START PROGRESS TRACKING -->
+        <div class="progressTracker">
+            <div class="progress-header">
+                <div class="header-label"></div>
+                <div class="header-bar">
+                    <div class="percent-label">0%</div>
+                    <div class="percent-label">25%</div>
+                    <div class="percent-label">50%</div>
+                    <div class="percent-label">75%</div>
+                    <div class="percent-label">100%</div>
+                </div>
+            </div>
+                <div class="progress-bar"><div class="label">A</div><div class="bar"><div class="progress" style="width: 100%;"></div></div></div>
+                <div class="progress-bar"><div class="label">B</div><div class="bar"><div class="progress" style="width: 60%;"></div></div></div>
+                <div class="progress-bar"><div class="label">C</div><div class="bar"><div class="progress" style="width: 90%;"></div></div></div>
+                <div class="progress-bar"><div class="label">D</div><div class="bar"><div class="progress" style="width: 30%;"></div></div></div>
+                <div class="progress-bar"><div class="label">E</div><div class="bar"><div class="progress" style="width: 50%;"></div></div></div>
+                <div class="progress-bar"><div class="label">F</div><div class="bar"><div class="progress" style="width: 40%;"></div></div></div>
+                <div class="progress-bar"><div class="label">G</div><div class="bar"><div class="progress" style="width: 20%;"></div></div></div>
+                <div class="progress-bar"><div class="label">H</div><div class="bar"><div class="progress" style="width: 70%;"></div></div></div>
+                <div class="progress-bar"><div class="label">I</div><div class="bar"><div class="progress" style="width: 50%;"></div></div></div>
+                <div class="progress-bar"><div class="label">J</div><div class="bar"><div class="progress" style="width: 60%;"></div></div></div>
+                <div class="progress-bar"><div class="label">K</div><div class="bar"><div class="progress" style="width: 80%;"></div></div></div>
+                <div class="progress-bar"><div class="label">L</div><div class="bar"><div class="progress" style="width: 30%;"></div></div></div>
+                <div class="progress-bar"><div class="label">M</div><div class="bar"><div class="progress" style="width: 50%;"></div></div></div>
+                <div class="progress-bar"><div class="label">N</div><div class="bar"><div class="progress" style="width: 40%;"></div></div></div>
+                <div class="progress-bar"><div class="label">O</div><div class="bar"><div class="progress" style="width: 90%;"></div></div></div>
+                <div class="progress-bar"><div class="label">P</div><div class="bar"><div class="progress" style="width: 10%;"></div></div></div>
+                <div class="progress-bar"><div class="label">Q</div><div class="bar"><div class="progress" style="width: 60%;"></div></div></div>
+                <div class="progress-bar"><div class="label">R</div><div class="bar"><div class="progress" style="width: 70%;"></div></div></div>
+                <div class="progress-bar"><div class="label">S</div><div class="bar"><div class="progress" style="width: 80%;"></div></div></div>
+                <div class="progress-bar"><div class="label">T</div><div class="bar"><div class="progress" style="width: 50%;"></div></div></div>
+                <div class="progress-bar"><div class="label">U</div><div class="bar"><div class="progress" style="width: 20%;"></div></div></div>
+                <div class="progress-bar"><div class="label">V</div><div class="bar"><div class="progress" style="width: 40%;"></div></div></div>
+                <div class="progress-bar"><div class="label">W</div><div class="bar"><div class="progress" style="width: 70%;"></div></div></div>
+                <div class="progress-bar"><div class="label">X</div><div class="bar"><div class="progress" style="width: 30%;"></div></div></div>
+                <div class="progress-bar"><div class="label">Y</div><div class="bar"><div class="progress" style="width: 60%;"></div></div></div>
+                <div class="progress-bar"><div class="label">Z</div><div class="bar"><div class="progress" style="width: 0%;" ></div></div></div>
+        </div>
+        <!-- END -->
+
+        <!-- START ALPHABETS -->
+        <div class="alphabet-container">
+            <div class="alphabet-title">Alphabet Chart</div> <!-- Added title -->
+            <div class="letters-wrapper">
+                <div class="letter" data-audio="../Assets/audio/A.mp3">A</div>
+                <div class="letter" data-audio="../Assets/audio/B.mp3">B</div>
+                <div class="letter" data-audio="../Assets/audio/C.mp3">C</div>
+                <div class="letter" data-audio="../Assets/audio/D.mp3">D</div>
+                <div class="letter" data-audio="../Assets/audio/E.mp3">E</div>
+                <div class="letter" data-audio="../Assets/audio/F.mp3">F</div>
+                <div class="letter" data-audio="../Assets/audio/G.mp3">G</div>
+                <div class="letter" data-audio="../Assets/audio/H.mp3">H</div>
+                <div class="letter" data-audio="../Assets/audio/I.mp3">I</div>
+                <div class="letter" data-audio="../Assets/audio/J.mp3">J</div>
+                <div class="letter" data-audio="../Assets/audio/K.mp3">K</div>
+                <div class="letter" data-audio="../Assets/audio/L.mp3">L</div>
+                <div class="letter" data-audio="../Assets/audio/M.mp3">M</div>
+                <div class="letter" data-audio="../Assets/audio/N.mp3">N</div>
+                <div class="letter" data-audio="../Assets/audio/O.mp3">O</div>
+                <div class="letter" data-audio="../Assets/audio/P.mp3">P</div>
+                <div class="letter" data-audio="../Assets/audio/Q.mp3">Q</div>
+                <div class="letter" data-audio="../Assets/audio/R.mp3">R</div>
+                <div class="letter" data-audio="../Assets/audio/S.mp3">S</div>
+                <div class="letter" data-audio="../Assets/audio/T.mp3">T</div>
+                <div class="letter" data-audio="../Assets/audio/U.mp3">U</div>
+                <div class="letter" data-audio="../Assets/audio/V.mp3">V</div>
+                <div class="letter" data-audio="../Assets/audio/W.mp3">W</div>
+                <div class="letter" data-audio="../Assets/audio/X.mp3">X</div>
+                <div class="letter" data-audio="../Assets/audio/Y.mp3">Y</div>
+                <div class="letter" data-audio="../Assets/audio/Z.mp3">Z</div>
+            </div>
+        </div>
+        
+        <!-- END -->
+         <a href="scan.htm"></a>
+    </div>
+    <script src = "../Assets/JS/letterSound.js"></script>
+</body>
+</html>

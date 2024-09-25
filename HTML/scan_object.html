@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Object</title>
+    <link rel="stylesheet" href="../Assets/CSS/scan_object.css">
+</head>
+<body>
+    {% include 'nav.html' %}
+
+    <div class="container">
+        <h1>Upload Image or Scan Object</h1>
+        <div class="button-container">
+            <button id="uploadButton" onclick="document.getElementById('fileInput').click()">Upload Image</button>
+            <input type="file" id="fileInput" accept="image/*" onchange="handleFileSelect(event)" style="display:none;">
+            <button id="cameraButton" onclick="startCamera()">Use Camera</button>
+        </div>
+        <img id="imagePreview" alt="Preview" style="display:none;">
+        <video id="video" autoplay playsinline style="display:none;"></video>
+        <button id="captureButton" onclick="captureImage()" style="display:none;">Capture Image</button>
+        <button id="deleteButton" onclick="deleteImage()" style="display:none;">Delete Image</button>
+        <button id="closeButton" onclick="closeCamera()" style="display:none;">Close Camera</button>
+        <button id="speakButton" onclick="speakResult()" style="display:none;">Speak Result</button>
+        <div id="predictionResult"></div>
+    </div>
+    <script src="../Assets/JS/scanObject.js"></script>
+</body>
+</html>

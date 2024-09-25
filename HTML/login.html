@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABCiFY Log-in</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/login.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Log-in</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+            {{ form.hidden_tag() }}
+            <div class="nn-container">
+                {{ form.nickname.label }}<br>
+                {{ form.nickname(size=32) }}<br>
+                {% for error in form.nickname.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div class="password-container">
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.submit() }}<br>
+                <a class="forgot-pass" href="/request_password_reset.html">Forgot Password?</a>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+
+        <div class="reg-btn">        
+            <a class="reg-here" href="/register.html">Create an Account</a><br>
+        </div>
+        
+        <!-- <a href="/">Welcome</a> -->
+    </div>
+        
+
+    <div class="background">   
+    </div>
+    <script>
+        window.onload = function() {
+            var messages = JSON.parse('{{ get_flashed_messages(with_categories=True) | tojson | safe }}');
+            var errorMessages = messages
+                .filter(function(msg) { return msg[0] === 'error'; })
+                .map(function(msg) { return msg[1]; })
+                .join(' ');
+
+            if (errorMessages) {
+                alert(errorMessages);
+            }
+        };
+    </script>
+</body>
+</html>

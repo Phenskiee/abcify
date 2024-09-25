@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Fredoka", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.burger-container {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to bottom, #FB9B0F, #ff4500);
+    border-radius: 50%;
+    border: 5px solid #FCD702;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Burger Icon */
+.burger {
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    color: none;
+    
+
+}
+
+.burger .line {
+    width: 100%;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: absolute;
+    
+}
+
+.burger .line:nth-child(1) {
+    top: 0;
+}
+
+.burger .line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger .line:nth-child(3) {
+    bottom: 0;
+}
+
+/* When burger is clicked, turn into an "X" with equal parts */
+.toggle .line:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.toggle .line:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle .line:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(150, 168, 196, 0.121);
+    /* background: linear-gradient(to bottom, #FB9B0F, #ff4500);
+    border: 5px solid #FCD702; */
+    border-radius: 15px;
+    padding: 2px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+}
+
+.nav-links.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-links li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff69b4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: block;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ff4081;
+} */
+
+.nav-links a {
+        background: linear-gradient(to bottom, #FEBD2E, #F0A21F); /* Gradient from light green to darker green */
+        border: 2px solid #FB9B0F; /* Darker green border */
+        border-radius: 12px; /* Rounded corners */
+        color: white;
+        text-shadow: #ff4500;
+        font-weight: 500;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px #b56f1f; /* Shadow for 3D effect */
+        transition: all 0.3s ease;
+        width: 80px;
+        margin: 2px;
+}
+
+.nav-links a:hover {
+    background: linear-gradient(to bottom, #FEBD2E, #F0A21F); /* Slightly different gradient on hover */
+}
+
+.nav-links a:active {
+    box-shadow: 0 2px #D88527; /* Reduced shadow on click */
+    transform: translateY(2px); /* Button moves down slightly on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .burger {
+        width: 35px;
+        height: 25px;
+    }
+
+    .nav-links a {
+        font-size: .7rem;
+    }
+}

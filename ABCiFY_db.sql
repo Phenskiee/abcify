@@ -1,0 +1,13 @@
+
+CREATE DATABASE ABCiFY;
+
+USE ABCiFY;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    nickname VARCHAR(100) NOT NULL UNIQUE,
+    password  VARCHAR(100) NOT NULL,
+    reset_token VARCHAR(100) NOT NULL
+);

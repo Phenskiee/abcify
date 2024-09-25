@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid's Navigation Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/nav.css" class="rel">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="burger-container">
+            <div class="burger" id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="scan_object.html">Scan</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            burger.classList.toggle('toggle');
+        });
+    </script>
+</body>
+</html>

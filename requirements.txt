@@ -1,0 +1,17 @@
+Flask==3.0.3
+Flask_MySQLdb==2.0.0
+flask_wtf==1.2.1
+gTTS==2.5.3
+joblib==1.4.2
+numpy==2.1.1
+Pillow==10.4.0
+python_bcrypt==0.3.2
+tensorflow==2.16.1
+tensorflow_intel==2.16.1
+WTForms==3.1.2
+
+gunicorn==20.0.4
+Werkzeug==0.16.0
+Jinja2==2.10.1
+itsdangerous==1.1.0
+MarkupSafe==1.1.1
